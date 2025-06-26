@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-image: url(/src/image/bg-repeat.jpg);
+  background-repeat: repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 50px;
+  gap: 200px;
+}
+
+.form {
+  display: flex;
+  min-height: 578px;
+  width: 59rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.titulo {
+  width: 450px;
+  color: #ffffff;
+}
+
+.titulo h1 {
+  font-weight: 900;
+  font-size: 30px;
+  margin-bottom: 11px;
+}
+
+.titulo p {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-content input {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  height: 60px;
+  padding-left: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  border: 1px solid #000000;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.form-content .input-mensagem {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  border: 1px solid #000000;
+  font-weight: 700;
+  margin-top: 15px;
+  resize: none;
+}
+
+.form-content input::placeholder,
+.form-content textarea::placeholder {
+  color: #a8a8a8;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.form h2 {
+  display: flex;
+  align-self: baseline;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.form-content a {
+  visibility: hidden;
+  color: #ff0000;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.form button {
+  width: 550px;
+  height: 51px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 25px;
+  font-weight: 700;
+  background-color: #3ccc87;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #2aa76b;
+  transition: 0.2s;
+}
+
+.form-content .campo-preenchido {
+  border: 1px solid #3ccc87;
+}
+
+.form-content .campo-vazio {
+  border: 1px solid #ff0000;
+}
