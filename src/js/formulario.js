@@ -1,31 +1,19 @@
-const campos = document.querySelectorAll(".form-content input, .form-content textarea");
-const botaoEnviar = document.querySelector(".btn");
+const camposFormulario = document.querySelectorAll(".campo")
+const botaoEnviar = document.querySelector(".btn-enviar")
 
-campos.forEach((campo) => {
-  campo.addEventListener("input", () => {
-    const span = campo.parentNode.querySelector(".span-required");
-    if (campo.value.trim() === "") {
-      campo.classList.remove("campo-preenchido");
-      campo.classList.add("campo-vazio");
-      if (span) span.style.visibility = "visible";
-    } else {
-      campo.classList.remove("campo-vazio");
-      campo.classList.add("campo-preenchido");
-      if (span) span.style.visibility = "hidden";
-    }
-  });
-});
+botaoEnviar.addEventListener('click', (e) =>{
+  e.preventDefault()
 
-botaoEnviar.addEventListener("click", (event) => {
-  let formValido = true;
-  campos.forEach((campo) => {
-    const span = campo.parentNode.querySelector(".span-required");
-    if (campo.value.trim() === "") {
-      campo.classList.add("campo-vazio");
-      campo.classList.remove("campo-preenchido");
-      if (span) span.style.visibility = "visible";
-      formValido = false;
+  camposFormulario.forEach((input)=>{
+    if (input.value) {
+      input.classList.add("campo-preenchido");
+      input.nextElementSibling.classList.remove('mostrar');
+    }else {
+      input.classList.remove("campo-preenchido");
+      input.classList.add("campo-vazio");
+      input.nextElementSibling.classList.add("mostrar");
     }
-  });
-  if (!formValido) event.preventDefault();
-});
+  })
+}) 
+
+

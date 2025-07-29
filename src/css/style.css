@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-  background-image: url(/src/image/bg-repeat.jpg);
+  background-image: url(../image/bg-repeat.jpg);
   background-repeat: repeat;
   min-height: 100vh;
   width: 100%;
@@ -43,12 +43,12 @@ main {
   font-weight: 400;
 }
 
-.form-content {
+.campos {
   display: flex;
   flex-direction: column;
 }
 
-.form-content input {
+.campos input {
   display: flex;
   flex-direction: column;
   width: 550px;
@@ -61,7 +61,7 @@ main {
   margin-top: 15px;
 }
 
-.form-content .input-mensagem {
+.campos textarea {
   height: 150px;
   display: flex;
   flex-direction: column;
@@ -74,8 +74,8 @@ main {
   resize: none;
 }
 
-.form-content input::placeholder,
-.form-content textarea::placeholder {
+.campos input::placeholder,
+.campos textarea::placeholder {
   color: #a8a8a8;
   font-weight: 700;
   font-size: 20px;
@@ -90,7 +90,7 @@ main {
   margin-left: 20px;
 }
 
-.form-content a {
+.campos a {
   visibility: hidden;
   color: #ff0000;
   font-weight: 400;
@@ -115,10 +115,14 @@ main {
   transition: 0.2s;
 }
 
-.form-content .campo-preenchido {
+.campo.campo-preenchido {
   border: 1px solid #3ccc87;
 }
 
-.form-content .campo-vazio {
+.campo.campo-vazio {
   border: 1px solid #ff0000;
+}
+
+.campos a.mostrar{
+  visibility: visible;
 }
